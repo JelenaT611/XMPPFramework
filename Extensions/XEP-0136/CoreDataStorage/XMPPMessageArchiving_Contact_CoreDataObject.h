@@ -14,6 +14,8 @@
 
 @property (nonatomic, strong) NSString * streamBareJidStr;
 
+@property (nullable, nonatomic, copy) NSString *localIdentifier;
+
 /**
  * This method is called immediately before the object is inserted into the managedObjectContext.
  * At this point, all normal properties have been set.

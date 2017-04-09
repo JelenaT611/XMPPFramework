@@ -137,12 +137,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 63F50D9A1C60208200CA0201 /* Build configuration list for PBXNativeTarget "XMPPFrameworkTests" */;
 			buildPhases = (
+				2B1841ACC0A11B2AB72DE67B /* 📦 Check Pods Manifest.lock */,
 				1D578D2426C0E3CA24902A13 /* [CP] Check Pods Manifest.lock */,
 				63F50D8E1C60208100CA0201 /* Sources */,
 				63F50D8F1C60208100CA0201 /* Frameworks */,
 				63F50D901C60208100CA0201 /* Resources */,
 				CCA1BE22B534ECFCFCF57023 /* [CP] Embed Pods Frameworks */,
 				72947C0BCD2C8A092200B05D /* [CP] Copy Pods Resources */,
+				D7DF0413849B25EFBF9D9D0B /* 📦 Embed Pods Frameworks */,
+				B36F3A971894DF3C55465A9F /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -210,6 +213,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		2B1841ACC0A11B2AB72DE67B /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		72947C0BCD2C8A092200B05D /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -225,6 +243,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XMPPFrameworkTests/Pods-XMPPFrameworkTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B36F3A971894DF3C55465A9F /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XMPPFrameworkTests/Pods-XMPPFrameworkTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CCA1BE22B534ECFCFCF57023 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -233,6 +266,21 @@
 			inputPaths = (
 			);
 			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XMPPFrameworkTests/Pods-XMPPFrameworkTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7DF0413849B25EFBF9D9D0B /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
